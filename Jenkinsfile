@@ -1,11 +1,15 @@
-currentBuild.displayName = "${currentBuild.displayName}: ${pipeline_image}"
-currentBuild.description = "${pipeline_image}"
-
 pipeline {
     parameters {
         string(name: 'TEST_REPO_URL', defaultValue: 'https://github.com/auto-qa-course/python-framework-example.git')
         string(name: 'TEST_BRANCH', defaultValue: 'lesson3')
     }
+
+    agent {
+        node {
+          label 'master'
+        }
+    }
+
 
     options {
         timestamps()
@@ -18,20 +22,28 @@ pipeline {
 
     stages {
 
-        stage(''Build & Unit tests'') {
-            //
+        stage('Build & Unit tests') {
+            steps {
+                sh('echo pass')
+            }
         }
 
         stage('SonarQube Scan') {
-            //
+            steps {
+                sh('echo pass')
+            }
         }
 
         stage('Publish') {
-             //
+            steps {
+                sh('echo pass')
+            }
         }
 
         stage('Deploy to QA env') {
-             //
+            steps {
+                sh('echo pass')
+            }
         }
 
         stage("Integration testing") {
@@ -68,7 +80,9 @@ pipeline {
         }
 
         stage('Deploy to Stage env') {
-             //
+            steps {
+                sh('echo pass')
+            }
         }
     }
 
