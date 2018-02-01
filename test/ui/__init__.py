@@ -1,9 +1,9 @@
 import os
-from lib.common.config_reader import ConfigReader
+from lib_custom.common.config_reader import ConfigReader
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from test import outPropertiesPath
-from lib.common.logger import BaseLogger
+from lib_custom.common.logger import BaseLogger
 
 
 class SeleniumDriverCover():

@@ -1,6 +1,6 @@
 from allure import feature
 from test.api.test_base import TestBase
-from lib.api.contacts.contacts_api import ContactsApi
+from lib_custom.api.contacts.contacts_api import ContactsApi
 
 
 @feature('Contacts API')

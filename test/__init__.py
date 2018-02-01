@@ -1,7 +1,7 @@
-from lib.common.utils import MiscUtils
-from lib.common.utils import FileUtils
-from lib.common.logger import BaseLogger
-from lib.common.config_reader import ConfigReader
+from lib_custom.common.utils import MiscUtils
+from lib_custom.common.utils import FileUtils
+from lib_custom.common.logger import BaseLogger
+from lib_custom.common.config_reader import ConfigReader
 import os
 
 

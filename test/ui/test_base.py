@@ -1,7 +1,7 @@
 import pytest
 import sys
 from allure_commons.types import AttachmentType
-from lib.common.logger import BaseLogger
+from lib_custom.common.logger import BaseLogger
 from test.ui import browser_type
 from test.ui import SeleniumDriverCover
 
