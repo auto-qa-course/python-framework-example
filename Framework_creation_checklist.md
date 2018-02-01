@@ -10,13 +10,14 @@
     * configurations (parameterized run, env variables, configuration files)
     * tests (specs, features, etc)
         * Here also need to be defined some structure. For example one can use feature -> story -> test case structure
-    * app specific classes and methods 
-        * api (can also split api and services operations)
-        * page objects (can also split page elements locators and operations of page)
-    * helper classes and methods (BP: wrapp related methods into one class\module\package)
-        * constants
-        * logger
-        * config reader
-        * time, file manipulations helpers
-        * data generation helpers
-5. Сhoose reporting tool if needed, setup and integrate 
+    * custom library
+        * app specific classes and methods 
+            * api (can also split api and services operations)
+            * page objects (can also split page elements locators and operations of page)
+        * helper classes and methods (BP: wrapp related methods into one class\module\package)
+            * constants
+            * logger
+            * config reader
+            * time, file manipulations helpers
+            * data generation helpers
+5. Choose additional reporting tool if needed, setup and integrate 
