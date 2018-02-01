@@ -1,0 +1,17 @@
+*.log
+**/*.pyc
+**/*/*.pyc
+**/*/*/*.pyc
+**/*/*/*/*.pyc
+__pycache__
+**/*__pycache__
+**/*/*__pycache__
+**/*/*/*__pycache__
+.gitignore
+Dockerfile
+reports
+out_docker_results
+.cache
+.git
+.idea
+venv

@@ -31,6 +31,20 @@ pytest test/api --alluredir $RESULTS_FOLDER/$TEST_TYPE
 
 allure serve reports
 ```
+`
 
+# API Test execution within Docker container 
 
+```
+docker build -t automation_demo . 
+mkdir out_docker_results
+
+# Fix Linux
+docker run -v $(pwd)/out_docker_results:/out:rw -e "ENVIRONMENT=QA" -e "TEST_TYPE=api" -it automation_demo pytest test/$TEST_TYPE --alluredir /out/$TEST_TYPE
+
+# For Windows 
+docker run -v /c/users/out_docker_results:/out:rw -e "ENVIRONMENT=QA" -e "TEST_TYPE=api" -it automation_demo pytest test/$TEST_TYPE --alluredir /out/$TEST_TYPE
+
+allure serve out_docker_results
+```
 
