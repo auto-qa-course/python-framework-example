@@ -41,3 +41,7 @@ class BaseApi:
         response = requests.delete(url, headers=kwargs['headers'])
         BaseLogger.write('Received "{}".'.format(response), 'DEBUG')
         return response
+
+    @staticmethod
+    def parse_response_json(response):
+        return json.loads(response._content)['data']
