@@ -57,7 +57,9 @@ pipeline {
 
                     mkdir out_docker_results || echo 'out_docker_results dir exists'
 
-                    docker run -v $(pwd)/out_docker_results:/out:rw -e "ENVIRONMENT=$QA_ENV" -e "TEST_TYPE=api" -e "RESULTS_FOLDER=outputs" -i automation_demo /bin/bash -c "pytest test/api --alluredir /out"
+                    docker run -v $(pwd)/out_docker_results:/out:rw -e "ENVIRONMENT=$QA_ENV" -e "TEST_TYPE=api" -e "RESULTS_FOLDER=outputs" -i automation_demo /bin/bash -c "pytest test/api/test_healthcheck.py --alluredir /out"
+
+                    docker run -v $(pwd)/out_docker_results:/out:rw -e "ENVIRONMENT=$QA_ENV" -e "TEST_TYPE=api" -e "RESULTS_FOLDER=outputs" -i automation_demo /bin/bash -c "pytest test/api/contacts --alluredir /out"
                 ''')
 
                 allure includeProperties: false, jdk: '', results: [[path: 'out_docker_results']]
