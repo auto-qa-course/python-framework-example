@@ -38,10 +38,11 @@ class TestCreateContactNegative(TestBaseContacts):
         response = self.contacts_service.post_contact(contact_body)
         assert response.status_code == 400
 
-    @allure.step('Negative: POST contact with not proper format - verify 400')
+    @allure.step('Negative: POST contact with not JSON format - verify 400')
+    @pytest.mark.xfail
     def test_negative_meeting_creation_with_not_proper_format(self):
         response = self.contacts_service.post_contact(self.contact_body['email'])
-        assert response.status_code == 500
+        assert response.status_code == 400
 
     @allure.step('Negative: POST contact with empty body - verify 400')
     @pytest.mark.xfail
