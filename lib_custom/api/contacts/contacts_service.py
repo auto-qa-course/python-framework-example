@@ -15,3 +15,14 @@ class ContactsService(ContactsApi):
         response = self.post_contact(contact_body)
         contact_id = self.parse_contact_id(response=response)
         return contact_id
+
+    def verify_contact_body(self, actual_body, expected_body, fields_to_check={'firstName', 'lastName', 'email'}):
+        result = True
+        parsed_content = self.parse_response_json(actual_body)
+
+        for field in fields_to_check:
+            if parsed_content[0]['info'][field] != expected_body[field]:
+                result = False
+                break
+
+        return result

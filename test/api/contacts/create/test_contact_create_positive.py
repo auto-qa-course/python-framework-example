@@ -14,10 +14,8 @@ class TestCreateContactPositive(TestBaseContacts):
     @allure.testcase('Positive: POST contact - verify 201 response and expected content')
     def test_positive_contact_creation_check_response(self):
         assert self.create_response.status_code == 201
-
         assert self.contact_id is not None
-
-        # tbd add checks for body
+        assert self.contacts_service.verify_contact_body(self.create_response, self.contact_body)
 
     @allure.testcase('Positive: POST contact - verify contacts list updated')
     def test_positive_contact_creation_check_list_update(self):
