@@ -12,7 +12,7 @@ class BaseApi:
 
         self.env_name = os.environ['ENVIRONMENT']
         self.env_config = ConfigReader(config_file_path='etc/env{}.conf'.format(self.env_name)).get_configuration()
-        self.common_config = ConfigReader(config_file_path='etc/common.conf'.format(self.env_name)).get_configuration()
+        self.common_config = ConfigReader(config_file_path='etc/common.conf').get_configuration()
 
         self.api_version = self.common_config.get('api_test_parameters', 'api_version')
         self.root_uri = self.env_config.get('api_test_parameters', 'main_api_url')
