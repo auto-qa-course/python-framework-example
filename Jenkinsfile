@@ -1,7 +1,7 @@
 pipeline {
     parameters {
-        string(name: 'TEST_REPO_URL', defaultValue: 'https://github.com/auto-qa-course/python-framework-example.git')
-        string(name: 'TEST_BRANCH', defaultValue: 'lesson3')
+        string(name: 'TEST_REPO_URL', defaultValue: 'https://github.com/auto-qa-course/python-framework-example.git', 'Please provide QA repo url.')
+        string(name: 'TEST_BRANCH', defaultValue: 'lesson3', 'Please provide QA repo branch.')
     }
 
     agent {
