@@ -16,7 +16,7 @@ class TestCreateContactNegative(TestBaseContacts):
 
     @allure.step('Negative: POST contact with missing firstName - verify 400')
     @pytest.mark.xfail
-    def test_negative_meeting_creation_without_firstName(self):
+    def test_negative_meeting_creation_without_first_name(self):
         contact_body = self.contact_body
         del contact_body['firstName']
         response = self.contacts_service.post_contact(contact_body)
@@ -24,7 +24,7 @@ class TestCreateContactNegative(TestBaseContacts):
 
     @allure.step('Negative: POST contact with missing lastName - verify 400')
     @pytest.mark.xfail
-    def test_negative_meeting_creation_without_lastName(self):
+    def test_negative_meeting_creation_without_last_name(self):
         contact_body = self.contact_body
         del contact_body['lastName']
         response = self.contacts_service.post_contact(contact_body)
