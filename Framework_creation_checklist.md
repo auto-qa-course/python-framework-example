@@ -20,4 +20,9 @@
             * config reader
             * time, file manipulations helpers
             * data generation helpers
-5. Choose additional reporting tool if needed, setup and integrate 
+5. Сhoose reporting tool if needed, setup and integrate 
+6. Do not commit: 
+    * compiled class files
+    * reports folder
+    * .idea folder ( should be in .gitignore )
+    * .git folder  ( should be in .gitignore )
