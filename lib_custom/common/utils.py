@@ -9,7 +9,7 @@ class FileUtils:
         for file_ in files:
             if not ignore_pattern in file_:
                 os.remove(file_)
-                print 'File removed {}'.format(file_)
+                print('File removed {}'.format(file_))
 
     @staticmethod
     def save_txt_file(file_path, file_content):
