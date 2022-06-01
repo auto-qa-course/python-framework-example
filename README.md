@@ -52,7 +52,6 @@ pytest test/api --alluredir $RESULTS_FOLDER/$TEST_TYPE
 allure serve reports
 ```
 `
-
 ## API Test execution within Docker container 
 
 ```
@@ -67,4 +66,3 @@ docker run -v /c/users/out_docker_results:/out:rw -e "ENVIRONMENT=QA" -e "TEST_T
 
 allure serve out_docker_results
 ```
-
