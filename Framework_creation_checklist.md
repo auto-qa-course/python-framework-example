@@ -7,7 +7,7 @@
     * test execution commands and options
 3. Create .gitignore file
 4. Define packages and folders structure
-    * configurations (parameterized run, env variables, configuration files)
+    * configurations (parametrized run, env variables, configuration files)
     * tests (specs, features, etc)
         * Here also need to be defined some structure. For example one can use feature -> story -> test case structure
     * custom library
